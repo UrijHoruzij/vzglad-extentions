@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Vzglad",
+  "description": "",
+  "version": "1.0.0",
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab", "tabs", "webNavigation","bookmarks"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
